@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title> Point of Sale </title>
+
+    <link rel="stylesheet" href="lib/metro/css/metro-all.min.css" />
+    <meta name="metro4:init" content="true">
+
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body class="h-vh-100 bg-white">
+
+    <nav data-role="ribbonmenu">
+      <ul class="tabs-holder">
+
+        <li><a href="#section-one">Sales</a></li>
+        <li><a href="#section-two">Admin</a></li>
+      </ul>
+
+      <div class="content-holder">
+        <div class="section" id="section-one">
+
+          <div class="group float-right">
+            <button class="ribbon-button">
+              <span class="icon fg-darkGreen">
+                <i class="fas fa-plus-circle"></i>
+              </span>
+              <span class="caption">New Order</span>
+            </button>
+
+            <button class="ribbon-button">
+              <span class="icon fg-darkRed">
+                <i class="fas fa-minus-circle"></i>
+              </span>
+              <span class="caption">Cancel/Refund</span>
+            </button>
+
+            <span class="title">Orders</span>
+          </div>
+
+          <div class="group float-right">
+            <button class="ribbon-button" onclick="window.location.href='/logout'">
+              <span class="icon fg-darkCyan">
+                <i class="fas fa-user-slash"></i>
+              </span>
+              <span class="caption">Logout <span class="username"></span></span>
+            </button>
+
+            <span class="title">Employee</span>
+          </div>
+        </div>
+        <div class="section" id="section-two">
+          <p class="p-4">Section two</p>
+        </div>
+
+      </div>
+    </nav>
+
+    <div data-role="splitter" data-split-sizes="70,30" class="h-100">
+      <div id="col1">
+
+
+      </div>
+      <div id="col2">
+
+
+      </div>
+    </div>
+
+
+
+    <script>
+      METRO_HOTKEYS_FILTER_CONTENT_EDITABLE = false;
+      METRO_HOTKEYS_FILTER_INPUT_ACCEPTING_ELEMENTS = true;
+      METRO_HOTKEYS_FILTER_TEXT_INPUTS = true;
+    </script>
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/metro/js/metro.min.js"></script>
+    <script type="text/javascript" src="lib/fontawesome/js/all.min.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+
+  </body>
+
+</html>

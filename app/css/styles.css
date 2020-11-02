@@ -1,0 +1,7 @@
+.currency, .qty, .unitprice, .headernum {
+  text-align: right;
+}
+
+.currency:before, .unitprice:before {
+  content: "R ";
+}

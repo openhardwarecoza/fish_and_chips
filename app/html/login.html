@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title> Login </title>
+    <link rel="stylesheet" href="lib/metro/css/metro-all.min.css" />
+    <meta name="metro4:init" content="true">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      .login-form {
+        width: 350px;
+        height: auto;
+        top: 50%;
+        margin-top: -160px;
+      }
+    </style>
+
+  </head>
+
+  <body class="h-vh-100 bg-darkCyan">
+
+
+    <form action="/login" method="post" class="login-form bg-white p-6 mx-auto border bd-default win-shadow">
+      <h2 class="text-light"><i class="fas fa-fw fa-sign-in-alt"></i> Point of Sale Login</h2>
+      <hr class="thin mt-4 mb-4 bg-white">
+      <div class="form-group">
+        <input type="text" data-role="input" data-prepend="<span class='mif-user'>" placeholder="Enter your username..." name="username">
+      </div>
+      <div class="form-group">
+        <input type="password" data-role="input" data-prepend="<span class='mif-key'>" placeholder="Enter your password..." name="password">
+      </div>
+      <div class="form-group mt-10">
+        <button class="submit-btn button success" class="button">Login</button>
+      </div>
+      <div class="remark alert" id="error-message">
+    </form>
+
+
+    </div>
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const info = urlParams.get('info');
+
+      if (info && typeof info !== 'object' && info !== null) {
+        const errorMessage = document.getElementById("error-message");
+        $("#error-message").html(info);
+        $("#error-message").show();
+      } else {
+        const errorMessage = document.getElementById("error-message");
+        $("#error-message").html("");
+        $("#error-message").hide();
+      }
+    </script>
+
+    <script>
+      METRO_HOTKEYS_FILTER_CONTENT_EDITABLE = false;
+      METRO_HOTKEYS_FILTER_INPUT_ACCEPTING_ELEMENTS = true;
+      METRO_HOTKEYS_FILTER_TEXT_INPUTS = true;
+    </script>
+    <script type="text/javascript" src="lib/metro/js/metro.min.js"></script>
+    <script type="text/javascript" src="lib/fontawesome/js/all.min.js"></script>
+
+
+  </body>
+
+</html>
